@@ -1,6 +1,6 @@
-package repository;
+package br.com.alunocrud.provaa1.repository;
 
-import domain.Curso;
+import br.com.alunocrud.provaa1.domain.Curso;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

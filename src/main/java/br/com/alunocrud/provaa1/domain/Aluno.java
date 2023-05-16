@@ -1,4 +1,4 @@
-package domain;
+package br.com.alunocrud.provaa1.domain;
 
 
 import jakarta.persistence.*;
@@ -7,20 +7,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
+import java.io.Serializable;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Entity
-public class Curso {
+@Table(name = "aluno")
+public class Aluno implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String campus;
+    private String matricula;
 
-    @OneToMany(mappedBy = "curso")
-    private List<Aluno> alunos;
+    @ManyToOne
+    @JoinColumn(name = "curso_id")
+    private Curso curso;
 }

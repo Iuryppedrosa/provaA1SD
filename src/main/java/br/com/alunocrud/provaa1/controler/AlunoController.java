@@ -1,9 +1,9 @@
-package controler;
+package br.com.alunocrud.provaa1.controler;
 
-import domain.Aluno;
+import br.com.alunocrud.provaa1.domain.Aluno;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import repository.AlunoRepository;
+import br.com.alunocrud.provaa1.repository.AlunoRepository;
 
 import java.net.URI;
 import java.util.List;
